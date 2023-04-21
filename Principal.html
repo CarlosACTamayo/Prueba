@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Pantalla Principal</title>
+</head>
+<body>
+    <div class="mobile-container">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <a href="Principal.html" class="active">Inicio</a>
+          <div id="myLinks">
+            <a href="registrocria.html">Registro de Cria</a>
+            <a href="registrosensor.html">Registro de Sensor</a>
+            <a href="clasificacioncria.html">Clasificacion de cria</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+        
+</body>
+</html>

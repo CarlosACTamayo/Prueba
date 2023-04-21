@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Registro Sensores</title>
+</head>
+<body>
+  <div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="Principal.html" class="active">Inicio</a>
+      <div id="myLinks">
+        <a href="registrocria.html">Registro de Cria</a>
+        <a href="registrosensor.html">Registro de Sensor</a>
+        <a href="clasificacioncria.html">Clasificacion de cria</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+  <section class="form-register">
+    
+  <h4>Registro de Datos de Sensores</h4>
+
+  <form method="post" action="registrocria.php">
+
+    <label for="ID">ID:</label>
+    <input class="controls" type="text" name="ID" id="ID" required>
+
+    <label for="frescar">Frecuencia Cardiaca:</label>
+    <input class="controls" type="text" name="frescar" id="frescar" required>
+
+    <label for="presan">Presion Sanguinea:</label>
+    <input class="controls" type="text" name="presan" id="presan" required>
+
+    <label for="freres">Frecuencia Respiratoria:</label>
+    <input class="controls" type="text" name="freres" id="freres" required>
+
+    <label for="temperatura">Temperatura:</label>
+    <input class="controls" type="text" name="temperatura" id="temperatura" required>
+
+    <input class="botons" type="submit" value="Registrar">
+    </form>
+    <p><a href="registrosensor.html">¿Quiere un Nuevo Registro de Sensor?</a></p>
+  </section>
+
+</body>
+</html>
