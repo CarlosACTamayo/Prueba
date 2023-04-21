@@ -1,30 +1,4 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "controldecrias";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-  die("Error de conexión: " . mysqli_connect_error());
-}
-
-$ID = $_POST['ID'];
-$frecar = $_POST['fecar'];
-$presan = $_POST['presan'];
-$freres = $_POST['freres'];
-$temperatura = $_POST['temperatura'];
-
-$sql = "INSERT INTO sensor (ID, frecar, presan, freres, temperatura) VALUES ('$ID', '$frecar', '$presan', '$freres', '$temperatura')";
-
-if (mysqli_query($conn, $sql)) {
-  echo "Registro exitoso";
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-?>
-<?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -52,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     
-    $sql = "INSERT INTO sensor (ID, frecar, presan, freres, temperatura) VALUES ('$ID', '$frecar', '$presan', '$freres', '$temperatura')";
+    $sql = "INSERT INTO sensor (ID, frecar, presan, freres, temperatura) VALUES ('$id', '$frecar', '$presan', '$freres', '$temperatura')";
 
     
     if (mysqli_query($conn, $sql)) {
